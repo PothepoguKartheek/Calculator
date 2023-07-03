@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cal{
+            position: relative;
+            
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    border: 5px solid #ccc;
+    background-color: rgb(58, 48, 48);
+    text-align: center;
+    border-radius: 30px;
+    margin: auto;
+
+            
+        
+        }
+        #num1,#num2{
+        
+            width: 280px;
+            height: 30px;
+            border-radius: 20px;
+        }
+        #btn{
+             position:absolute;
+            display: flex;
+            margin-top: 20px;
+        }
+        #btn1{
+            width: 80px;
+            height: 80px;
+            margin-left: 10px;
+            margin-top: 10px;
+            border-radius: 100px;
+            background-color: rgb(201, 250, 250);
+        }
+        #btn1:hover {
+         background-color: #4CAF50; /* Green */
+         color: white;
+         cursor: pointer;
+         }
+         #btn2:hover {
+         background-color: #4CAF50; /* Green */
+         color: white;
+         cursor: pointer;
+         }
+         #btn3:hover {
+         background-color: #4CAF50; /* Green */
+         color: white;
+         cursor: pointer;
+         }
+         #btn4:hover {
+         background-color: #4CAF50; /* Green */
+         color: white;
+         cursor: pointer;
+         }
+         #sub:hover {
+         background-color: #4CAF50; /* Green */
+         color: white;
+         cursor: pointer;
+         }
+        #btn2{
+            position:absolute;
+            width: 80px;
+            height: 80px;
+            margin-top: 10px;
+            margin-left: 100px;
+            border-radius: 100px;
+            background-color: rgb(201, 250, 250);
+            /* margin-bottom:0px; */
+        }
+        #btn3{
+            width: 80px;
+            height: 80px;
+            margin-left: -80px;
+            margin-top: 100px;
+            border-radius: 100px;
+            background-color: rgb(201, 250, 250);
+        }
+        #btn4{
+            width: 80px;
+            height: 80px;
+            margin-left: 10px;
+            margin-top: 100px;
+            border-radius: 100px;
+            background-color: rgb(201, 250, 250);
+        }
+        #sub{
+            width: 80px;
+            height: 80px;
+            margin-left: 10px;
+            margin-top: 100px;
+            border-radius: 100px;
+            background-color: rgb(201, 250, 250);
+        }
+        #display{
+            background-color: aqua;
+            height: 30px;
+            width: 70px;
+            margin-top: 4px;
+            margin-left: 110px;
+            border-radius: 3px;
+            text-align: center;
+            background: rgb(30, 190, 30);
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="cal">
+    <input type="number" placeholder="enter a number1" id="num1"><br>
+    <input type="number" placeholder="enter a number2" id="num2"><br>
+    <div id="display">Result</div>
+    <div id="btn">
+        <button id="btn1" onclick="add()">+</button><br>
+        <button id="btn2" onclick="sub()">-</button>
+        <button id="btn3" onclick="mul()">*</button>
+        <button id="btn4" onclick="divd()">/</button>
+        <button type="submit" id="sub">=</button>
+    
+    </div>
+    </div>
+    <script>
+        let number1=document.getElementById("num1");
+        let number2=document.getElementById("num2");
+        let div=document.getElementById("display")
+        let add=()=>
+        {
+            let num1=number1.value
+            let num2=number2.value
+            let Cnum1=Number(num1)
+            let Cnum2=Number(num2)
+            let Result=Cnum1+Cnum2
+            div.textContent=Result
+            
+
+        }
+        let sub=()=>
+        {
+            let num1=number1.value
+            let num2=number2.value
+            let Cnum1=Number(num1)
+            let Cnum2=Number(num2)
+            let Result=Cnum1-Cnum2
+            div.textContent=Result
+            
+
+        }
+        let mul=()=>
+        {
+            let num1=number1.value
+            let num2=number2.value
+            let Cnum1=Number(num1)
+            let Cnum2=Number(num2)
+            let Result=Cnum1*Cnum2
+            div.textContent=Result
+            
+
+        }
+        let divd=()=>
+        {
+            let num1=number1.value
+            let num2=number2.value
+            let Cnum1=Number(num1)
+            let Cnum2=Number(num2)
+            let Result=Cnum1/Cnum2
+            div.textContent=Result
+            
+
+        }
+    </script>
+   
+</body>
+</html>
